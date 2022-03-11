@@ -1,0 +1,130 @@
+.preview{
+    position: absolute;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    width: 10%;
+    border-radius: 10px;
+    z-index: 999;
+    font-size: 85%;
+    -webkit-user-select: none;
+ 
+}
+
+.preview:hover{
+    border: 3px solid yellow;
+
+    cursor: pointer;
+}
+
+.line{
+    border: 2px solid black;
+    z-index: 998;
+    background-color: black;
+    text-align: center;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-y: hidden;
+}
+
+#iconholder{
+    margin-left: 2%;
+    margin-top: 2%;
+    position: absolute;
+    
+}
+
+#iconholder:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+#settingsDiv{
+    margin-left: -0.5%;
+    margin-top: -1%;
+
+    background-color: whitesmoke;
+    z-index: 1000;
+    width: 25%;
+
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow-y: scroll;
+}
+
+
+#settingsText{
+    font-size: 225%;
+    margin-top: 0;
+    margin-bottom: 9%;
+    padding-top: 10%;
+    text-decoration: underline;
+    font-weight: bold;
+    word-wrap:initial;
+    padding-right: 2%;
+}
+
+.subSettingsText{
+    font-size: 150%;
+    font-weight: bold;
+}
+
+a{
+    word-wrap: break-word;
+}
+
+#rainbowBar{
+    background: linear-gradient(to right,#e66465, #9198e5);
+    margin-top: 1%;
+    height: 10px;
+}
+
+.flexInputText{
+    display: flex;
+   
+}
+
+.inputTextSubmit{
+    margin-left: 3%;
+    background-color: lightblue;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+    transition: 0.65s;
+    
+}
+
+.inputTextSubmit:hover{
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.65s;
+}
+
+.sliderText{
+    margin-bottom: 2%;
+}
+
+#applyBtn{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 7%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-size: 125%;
+    transition: 0.5s;
+    -webkit-user-select:none;
+}
+
+#applyBtn:hover{
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.5s;
+}

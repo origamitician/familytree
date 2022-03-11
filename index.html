@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e893556305.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <div id = 'tree'></div>
+        <!--three navigation bars-->
+    
+        <div id = 'iconholder'>
+            <!--<i class="fa fa-bars" style="font-size:35px"></i>-->
+        </div>
+    
+        <div id = 'settingsDiv'>
+        
+            <p id = 'settingsText'>Settings</p>
+            <p id = 'message'>To view a cleaner (but not interactive) family tree, go to this link: <a href="https://www.dnaweekly.com/tools/family-tree-maker/3095b483a241a3c053749d8960b75388/">https://www.dnaweekly.com/tools/family-tree-maker/3095b483a241a3c053749d8960b75388/</a></p>
+            <p class = 'subSettingsText'>Dimensions</p>
+            <!--<p class = 'sliderText'>Generation height: 24</p>
+            <input type="range" min="2", max="50", value="24", class = "range1">-->
+            <p class = 'sliderText'>Individual box size: 10</p>
+            <input type="range" min="10", max="35", value="10", class = "range1">
+            <p class = 'sliderText'>Distance between partners: 15</p>
+            <input type="range" min="5", max="50", value="15", class = "range1">
+            <p class = 'sliderText'>Distance between siblings: 20</p>
+            <input type="range" min="1", max="30", value="20", class = "range1">
+            <p class = 'sliderText'>Bar thickness: 2</p>
+            <input type="range" min="1", max="10", value="2", class = "range1">
+
+            <div id = 'applyBtn'>Apply changes</div>
+    
+            <p class = 'subSettingsText'>Colors</p>
+            <p class = 'inputText'>Color for female:</p>
+            <div class = 'flexInputText'>
+                <input type="text" placeholder="Enter color or hex" class = 'textBox'>
+                <p class = 'inputTextSubmit'>Change</p>
+            </div>
+            <p class = 'inputText'>Color for male:</p>
+            <div class = 'flexInputText'>
+              <input type="text" placeholder="Enter color or hex" class = 'textBox'>
+                <p class = 'inputTextSubmit'>Change</p>
+            </div>
+            
+        </div>
+
+</body>
+<script src = 'js/app.js'></script>
+
+</html>
