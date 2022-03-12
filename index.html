@@ -11,17 +11,21 @@
 </head>
 <body>
 
-        <div id = 'tree'></div>
+        <div id = 'tree'>
+            <p id = 'showSettings'>Show settings > </p>
+        </div>
         <!--three navigation bars-->
     
         <div id = 'iconholder'>
             <!--<i class="fa fa-bars" style="font-size:35px"></i>-->
         </div>
+
+        
     
         <div id = 'settingsDiv'>
-        
-            <p id = 'settingsText'>Settings</p>
-            <p id = 'message'>To view a cleaner (but not interactive) family tree, go to this link: <a href="https://www.dnaweekly.com/tools/family-tree-maker/3095b483a241a3c053749d8960b75388/">https://www.dnaweekly.com/tools/family-tree-maker/3095b483a241a3c053749d8960b75388/</a></p>
+            <p id = 'x'>[X]</p>
+            <p id = 'settingsText'>How to use:</p>
+            <p id = 'message'>This family tree is <b> hand-coded</b> without any use of website builders. <!--<b>It is interactive, meaning if you click on a certain name, a popup would come up that describes key things about that particular family member.</b>Some text in the popups may be encrypted because they contain very personal details. --><br><br> The "change color" commands still don't work. There also are a few visual glitches that I'm still working to fix on, but you get the general idea! <br><br>To view a cleaner family tree, go to this link: <a href="https://www.dnaweekly.com/tools/family-tree-maker/3095b483a241a3c053749d8960b75388/" target = '_blank'>https://www.dnaweekly.com/tools/family-tree-maker/3095b483a241a3c053749d8960b75388/</a>. <br><br> To view the code powering this, check this <a href="/js/app.js" target = '_blank'>link.</a> (Warning, code gets extremely messy!)</p>
             <p class = 'subSettingsText'>Dimensions</p>
             <!--<p class = 'sliderText'>Generation height: 24</p>
             <input type="range" min="2", max="50", value="24", class = "range1">-->
@@ -30,7 +34,7 @@
             <p class = 'sliderText'>Distance between partners: 15</p>
             <input type="range" min="5", max="50", value="15", class = "range1">
             <p class = 'sliderText'>Distance between siblings: 20</p>
-            <input type="range" min="1", max="30", value="20", class = "range1">
+            <input type="range" min="8", max="40", value="20", class = "range1">
             <p class = 'sliderText'>Bar thickness: 2</p>
             <input type="range" min="1", max="10", value="2", class = "range1">
 
@@ -49,6 +53,16 @@
             </div>
             
         </div>
+
+        <!--<div id = 'informationDiv'>
+            <p id = 'informationText'>About </p>
+            <p class = 'keyInformation'><b>> Birthplace:</b> </p>
+            <p class = 'keyInformation'><b>> Birthdate:</b> </p>
+            <p class = 'keyInformation'><b>> Status:</b> </p>
+            <p class = 'keyInformation'><b>> Currently resides in:</b> </p>
+            <p class = 'keyInformation'><b>> Facts</b> </p>
+            <p class = 'keyInformation'><b>> Personal memories</b> </p>
+        </div>-->
 
 </body>
 <script src = 'js/app.js'></script>
