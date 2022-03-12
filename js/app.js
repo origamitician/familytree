@@ -311,3 +311,4 @@ document.getElementById('applyBtn').addEventListener('click', redraw);
 document.getElementById('x').addEventListener('click', hideSettings);
 document.getElementById('showSettings').addEventListener('click', showSettings);
 
+//small change
