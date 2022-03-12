@@ -53,23 +53,27 @@ body{
     padding-right: 2%;
     overflow-y: scroll;
 }
-
 #informationDiv{
     margin-left: -0.5%;
     margin-top: -1%;
     background-color: whitesmoke;
     z-index: 1001;
-    width: 25%;
+    width: 20%;
     top: 5.5%;
     padding-left: 2%;
     padding-right: 2%;
     overflow-y: scroll;
+    height: 300px;
+    border: 2px solid black;
     position: absolute;
+    border-top-left-radius: 40px;
+    scrollbar-width: thin;
+    display: none;
 }
 
 
 #settingsText, #informationText{
-    font-size: 225%;
+    font-size: 175%;
     margin-top: 0;
     margin-bottom: 9%;
     padding-top: 0;
@@ -77,6 +81,10 @@ body{
     font-weight: bold;
     word-wrap:initial;
     padding-right: 2%;
+}
+
+#informationText{
+    padding-top: 3%;
 }
 
 .subSettingsText{
@@ -171,4 +179,12 @@ a{
 #showSettings:hover{
     color: lightblue;
     cursor: pointer;
+}
+
+.keyInformation{
+    font-size: 105%;
+}
+
+#tree{
+    padding-bottom: 1000%;
 }
