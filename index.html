@@ -8,12 +8,16 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/e893556305.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <div id = 'settingsDiv'>
   
         <p id = 'settingsText'>How to use:</p>
-        <p id = 'message'>This family tree is <b> hand-coded</b> without any use of website builders. <b>Hovering over the names would show you the pictures. </b> There may be a few glitches, but you get the general idea! <br><br> To view the code powering this, check this <a href="https://origamitician.github.io/familytree/js/app.js" target = '_blank'>link.</a> (Warning, code gets extremely messy!)</p>
+        <p id = 'message'>This family tree is <b> hand-coded</b> without any use of website builders, cause <span id = 'emphasisGradient'>they can't make cool gradients like this!</span> Hovering over the names would show you the pictures. </b> There may be a few glitches, but you get the general idea! <br><br> To view the code powering this, check this <a href="https://origamitician.github.io/familytree/js/app.js" target = '_blank'>link.</a> (Warning, code gets extremely messy!)</p>
         <hr>
 
         <p id = 'type'>Currently showing: <b id = 'bold'>Maternal side</b><br></p>
@@ -26,11 +30,11 @@
         <!--<p class = 'sliderText'>Generation height: 24</p>
         <input type="range" min="2", max="50", value="24", class = "range1">-->
         <p class = 'sliderText'>Individual box size: 10</p>
-        <input type="range" min="1", max="25", value="10", class = "range1">
-        <p class = 'sliderText'>Distance between partners: 15</p>
-        <input type="range" min="1", max="25", value="15", class = "range1">
+        <input type="range" min="0", max="25", value="10", class = "range1">
+        <p class = 'sliderText'>Distance between partners: 5</p>
+        <input type="range" min="1", max="25", value="5", class = "range1">
         <p class = 'sliderText'>Distance between siblings: 20</p>
-        <input type="range" min="2", max="30", value="20", class = "range1">
+        <input type="range" min="2", max="30", value="15", class = "range1">
         <p class = 'sliderText'>Bar thickness: 1</p>
         <input type="range" min="1", max="3", value="1", class = "range1">
 
@@ -39,19 +43,34 @@
         <p class = 'subSettingsText'>Colors</p>
         <p class = 'inputText'>Color for female:</p>
         <div class = 'flexInputText'>
-            <input type="text" placeholder="Enter color or hex" class = 'textBox'>
+            <input type="text" placeholder="Enter color (no space) or hex" class = 'textBox'>
             <p class = 'inputTextSubmit'>Change</p>
         </div>
         <p class = 'inputText'>Color for male:</p>
         <div class = 'flexInputText'>
-          <input type="text" placeholder="Enter color or hex" class = 'textBox'>
+          <input type="text" placeholder="Enter color (no space)or hex" class = 'textBox'>
+            <p class = 'inputTextSubmit'>Change</p>
+        </div>
+        <p class = 'inputText'>Color for "unidentified"</p>
+        <div class = 'flexInputText'>
+          <input type="text" placeholder="Enter color (no space)or hex" class = 'textBox'>
+            <p class = 'inputTextSubmit'>Change</p>
+        </div>
+        <p class = 'inputText'>Bar color</p>
+        <div class = 'flexInputText'>
+          <input type="text" placeholder="Enter color (no space) or hex" class = 'textBox'>
+            <p class = 'inputTextSubmit'>Change</p>
+        </div>
+        <p class = 'inputText'>Text color</p>
+        <div class = 'flexInputText'>
+          <input type="text" placeholder="Enter color (no space) or hex" class = 'textBox'>
             <p class = 'inputTextSubmit'>Change</p>
         </div>
         
     </div>
-        
+        <p id = 'title'>Micaiah's maternal family tree ^</p>
         <div id = 'tree'>
-            <p id = 'title'>Maternal family tree</p>
+            
             <p id = 'showSettings'>Show settings > </p>
         </div>
         <!--three navigation bars-->
@@ -65,14 +84,26 @@
         
 
         <div id = 'informationDiv'>
-            <!--<p id = 'informationText'>Picture of </p>
-            <p class = 'keyInformation'><b>> Birthplace:</b> </p>
-            <p class = 'keyInformation'><b>> Birthdate:</b> </p>
-            <p class = 'keyInformation'><b>> Status:</b> </p>
-            <p class = 'keyInformation'><b>> Currently resides in:</b> </p>
-            <p class = 'keyInformation'><b>> Facts</b> </p>
-            <p class = 'keyInformation'><b>> Personal memories</b> </p>-->
-            <img src="micaiah.png" alt="" id = 'floatingImage'>
+            <!--<p id = 'informationText'>Picture of </p>-->
+            
+            <p id = 'warningText'>⚠️ No picture available for </p>
+     
+                <img src="micaiah.png" alt="" id = 'floatingImage'>
+                <p id = 'readMore'>Click for more!</p>
+        </div>
+
+        <div id = 'moreInformationDiv'>
+            <div id = 'topHeader'>
+                <img src="" alt="" id = 'profilepic'>
+                <p id = 'introductory'>About Miki Kiyokawa</p>
+                <p id = 'exit'>[x]</p>
+            </div>
+            <p class = 'keyInformation'><b>► Birthplace:</b> </p>
+            <p class = 'keyInformation'><b>► Birthdate:</b> </p>
+            <p class = 'keyInformation'><b>► Status:</b> </p>
+            <p class = 'keyInformation'><b>► Currently resides in:</b> </p>
+            <p class = 'keyInformation'><b>► Facts</b> </p>
+            <p class = 'keyInformation'><b>► Personal memories</b> </p>
         </div>
         <!--small change!-->
 </body>

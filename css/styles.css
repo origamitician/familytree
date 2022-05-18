@@ -1,13 +1,37 @@
 .preview{
     position: absolute;
-    padding-top: 1%;
-    padding-bottom: 1%;
+
     text-align: center;
     width: 10%;
     border-radius: 10px;
     z-index: 999;
-    font-size: 85%;
+    font-size: 105%;
     -webkit-user-select: none;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+}
+
+
+
+#emphasis{
+    font-size: 160%;
+
+    font-weight: bold;
+
+    color: cornflowerblue;
+
+    
+}
+
+#emphasisGradient{
+    font-size: 125%;
+    background-image: linear-gradient(90deg, #ffa3eb, #9fd1fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    text-decoration: underline;
 
 }
 
@@ -18,15 +42,16 @@
 }
 
 .line{
-    border: 2px solid black;
+ 
     z-index: 998;
-    background-color: black;
+ 
     text-align: center;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
     overflow-y: hidden;
+    display: flex;
 }
 
 #iconholder{
@@ -86,7 +111,7 @@ body{
 }
 
 .subSettingsText{
-    font-size: 150%;
+    font-size: 165%;
     font-weight: bold;
 }
 
@@ -122,6 +147,12 @@ a{
     cursor: pointer;
     border-radius: 30px;
     transition: 0.65s;
+}
+
+.inputText{
+    font-size: 125%;
+    padding-bottom: 3%;
+    margin-bottom: 0;
 }
 
 .sliderText{
@@ -181,18 +212,25 @@ a{
 }
 
 .keyInformation{
-    font-size: 105%;
+    font-size: 120%;
+    margin-left: 5%;
 }
 
 #tree{
-    padding-bottom: 1000%;
-    margin-top: 5%;
+    top: 10%;
 }
 
 #title{
     position: absolute;
     font-size: 500%;
-    left: 100%;
+    left: 50%;
+    top: 60%;
+    width: 100%;
+    background-image: linear-gradient(90deg, #ffa3eb, #9198e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
 }
 
 #type{
@@ -227,4 +265,90 @@ a{
 #floatingImage{
     width: 100%;
 }
+
+#warningText{
+    font-size: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    
+}
+
+#readMore{
+    padding-bottom: 2%;
+    margin-bottom: 0;
+    text-align: center;
+    color: darkgreen;
+    font-weight: bold;
+    margin-top: 2%;
+    
+}
+
+.textBox{
+    width: 135%;
+}
 /*small change*/
+
+#moreInformationDiv{
+    width: 48%;
+    position: absolute;
+
+    top: 6%;
+    z-index: 1002;
+    overflow-y: scroll;
+    height: 500px;
+    border: 3px solid black;
+    background-color: white;
+    display: none;
+}
+
+#topHeader{
+    display: flex;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1003;
+    box-shadow: 5px 5px 18px #888888;
+    background-color: white;
+    position: sticky;
+}
+
+
+#profilepic{
+    width: 10%;
+    border: 1px solid black;
+}
+
+#introductory{
+    width: 75%;
+    margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 165%;
+}
+
+#exit{
+    width: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-size: 175%;
+    -webkit-user-select: none;
+}
+
+#exit:hover{
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+}
+
+.facts{
+    margin-left: 2.5%;
+    opacity: 0.9;
+    font-size: 90%;
+    line-height: 1.5;
+    margin-right: 5%;
+}

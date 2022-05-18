@@ -1,7 +1,20 @@
-//UPDATES FOR THE FUTURE
-/*update visual glitch on 3rd generation*/
+document.pageYOffset = 0;
+//360 noscope!!!!1!!1!!111!
+document.body.scroll({
+    top: 0,
+    behavior: 'smooth'
+  });
 
+document.getElementById('settingsDiv').scrollIntoView();//UPDATES FOR THE FUTURE
+/*update visual glitch on 3rd generation*/
+document.getElementsByClassName('flexInputText')[4].style.paddingBottom = '10%';
 var mode = 'm';
+
+var male = '#9fd1fc';
+var female = '#ffa3eb';
+var unidentified = 'black';
+var barColor = 'black';
+var textColor = 'black'
 
 document.getElementById('settingsDiv').style.height = window.innerHeight + 'px';
 var maternal = [
@@ -9,7 +22,7 @@ var maternal = [
 
     /*1*/{name: 'Michael Cape', marriedTo: 0, kids: [2, 3, 4], dob: 'April 9, 1969', marriageDate: 'December 28, xxxx', marriagePlace: '8118 Ingleside Way, Sacramento, CA', generation: 3, gender: 'm', /*kidsOf: [11, 12],*/ birthplace: 'San Francisco, US', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['He went to Bible college in the Phillipines, where he met my mother.', 'He was the youngest of 4, so he was subject to constant bullying. He therefore developed tactics to fight back.', 'He met my mom when the church sent him to pick up a new member that would be joining them, and that happened to be my mom.'], memories: ['My dad introduced me to running, and we ran and trained for the Great Aloha Run when I was only 7 years old.'], picture: ''}, 
 
-    /*2*/{name: '(廖) Micaiah Cape', marriedTo: -1, kids: [], dob: 'February 15, 2005', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 4, gender: 'm', birthplace: 'Honolulu, HI', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['I have perfect pitch!', 'I have a crush on (encrypted).', 'My longest (non-race) run ever is 11.17 miles, in 1 hour 20 minutes and 57 seconds.', 'I\'m a Kumon Math program graduate', 'I have two published articles in scientific peer-reviewed medical journals.', 'I coded this family tree myself.', 'My cumulative GPA is coincidentally around 4.20'], memories: ['I used to be scared of flashing lights.'], picture: 'micaiah.png'},
+    /*2*/{name: '(廖) Micaiah Cape', marriedTo: -1, kids: [], dob: 'February 15, 2005', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 4, gender: 'm', birthplace: 'Honolulu, HI', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['I have perfect pitch, and I love flexing this on anyone I could!', 'I have a crush on (encrypted).', 'My longest (non-race) run ever is 11.17 miles, in 1 hour 20 minutes and 57 seconds.', 'I was the junior homecoming prince and the senior prom prince.', 'I have two published articles in scientific peer-reviewed medical journals.', 'I coded this family tree myself.', 'My cumulative GPA is coincidentally around 4.20', 'I ended up crying at the end of track season.', 'Michael was my Spartan Buddy when I came into Maryknoll sophomore year and we\'ve been friends ever since.', 'I could run 2 sub-6 minute miles, back to back.'], memories: ['I used to be scared of flashing lights.'], picture: 'micaiah.png'},
 
     /*3*/{name: '(廖) Malachi Cape', marriedTo: -1, kids: [], dob: 'November 18, 2007', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 4, gender: 'm', birthplace: 'Honolulu, HI', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['He is allergic to gluten', 'He also enjoys cross country and track.', 'He likes to drive me crazy by saying cringy things.'], memories: ['He was holding a yellow toy bulldozer in his hands when he was born.'], picture: 'malachi.png'},
 
@@ -28,12 +41,12 @@ var maternal = [
     /*10*/{name: '黄阿六', marriedTo: 9, kids: [5, 20, 21, 22, 23], dob: '1916', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 1, gender: 'f', exists: 'Deceased', birthplace: 'Puli, Taiwan', livesIn: 'Hiroshima, Japan', facts: ['They met by matchmaking', 'Moved to Hiroshima before World War 2, because she did not like the agricultural job she worked at Puli and wanted to get out. THEY DIDN’T BRING ANY MONEY!', 'Ran a Chinese restaurant upon arrival. She was a bit weird, in a good way, as my mom likes to describe her. For example, when she ate out, she would get mad at the waiter over skimpy portions. At the same time though, post-World War II, she would offer free hearty meals at her restaurant for any passerby, due to Japan being hit really hard by the war.'], memories: [], picture: ''},
 
     /*11*/{name: 'Guo Buo', marriedTo: 15, kids: [14, 25, 26], picture: '', generation: 2, gender: 'f'},
-    /*12*/{name: 'べんぎちっこん', marriedTo: 16, kids: [27, 28, 29], picture: 'bengi.png', generation: 2, gender: 'm'},
-    /*13*/{name: '沖縄のちっこん', marriedTo: 17, kids: [38, 39], picture: '', generation: 2, gender: 'm'},
-    /*14*/{name: 'メコちゃん', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'f'},
+    /*12*/{name: '(廖) Bengi', marriedTo: 16, kids: [27, 28, 29], picture: 'bengi.png', generation: 2, gender: 'm'},
+    /*13*/{name: '(廖) Minchen', marriedTo: 17, kids: [38, 39], picture: '', generation: 2, gender: 'm'},
+    /*14*/{name: 'Meko', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'f'},
     /*15*/{name: '---', marriedTo: -1, kids: [14], picture: '', generation: 2, gender: 'm'},
     /*16*/{name: 'Gloria', marriedTo: 15, kids: [], picture: '', generation: 2, gender: 'f'},
-    /*17*/{name: 'じゅんこ姉さん', marriedTo: 14, kids: [], picture: '', generation: 2, gender: 'f'},
+    /*17*/{name: 'Junko', marriedTo: 14, kids: [], picture: '', generation: 2, gender: 'f'},
     /*18*/{name: 'Guo Buo\'s kid\'s partner', marriedTo: 14, kids: [], picture: '', generation: 3, gender: 'm'},
     /*19*/{name: 'Guo Buo\'s kid 2', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'm'},
 
@@ -44,20 +57,20 @@ var maternal = [
     /*24*/{name: 'Kid 1', marriedTo: 20, kids: [], picture: '', generation: 3, gender: 'm'},
     /*25*/{name: 'Angela', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'f'},
     /*26*/{name: 'Henry', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'm'},
-    /*27*/{name: 'Mark', marriedTo: 30, kids: [36, 37], picture: 'mark.png', generation: 3, gender: 'm'},
-    /*28*/{name: 'Gwen', marriedTo: 31, kids: [34, 35], picture: '', generation: 3, gender: 'f'},
-    /*29*/{name: 'Daniel', marriedTo: 32, kids: [33], picture: '', generation: 3, gender: 'm'},
+    /*27*/{name: '(廖) Mark', marriedTo: 30, kids: [36, 37], picture: 'mark.png', generation: 3, gender: 'm'},
+    /*28*/{name: '(廖) Gwen', marriedTo: 31, kids: [34, 35], picture: '', generation: 3, gender: 'f'},
+    /*29*/{name: '(廖) Daniel', marriedTo: 32, kids: [33], picture: '', generation: 3, gender: 'm'},
     /*30*/{name: 'Suk', marriedTo: 27, kids: [], picture: 'suk.png', generation: 3, gender: 'f'},
 
     /*31*/{name: 'Steve Arimoto', marriedTo: 28, kids: [], picture: '', generation: 3, gender: 'm'},
     /*32*/{name: 'さやこ', marriedTo: 29, kids: [], picture: '', generation: 3, gender: 'f'},
-    /*33*/{name: 'ルカ', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'm'},
-    /*34*/{name: 'Isaac', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'm'},
-    /*35*/{name: 'Kai', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'm'},
-    /*36*/{name: 'Sienna', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'f'},
-    /*37*/{name: 'Lila', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'f'},
-    /*38*/{name: 'ゆりこ', marriedTo: 40, kids: [], picture: '', generation: 3, gender: 'f'},
-    /*39*/{name: 'よしえ', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'f'},
+    /*33*/{name: '(廖) ルカ', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'm'},
+    /*34*/{name: 'Isaac Arimoto', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'm'},
+    /*35*/{name: 'Kai Arimoto', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'm'},
+    /*36*/{name: '(廖) Sienna', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'f'},
+    /*37*/{name: '(廖) Lila', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'f'},
+    /*38*/{name: '(廖) ゆりこ', marriedTo: 40, kids: [], picture: '', generation: 3, gender: 'f'},
+    /*39*/{name: '(廖) よしえ', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'f'},
     /*40*/{name: '---', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'm'},
 
     /*41*/{name: '---', marriedTo: 20, kids: [], picture: '', generation: 2, gender: 'f'},
@@ -77,10 +90,10 @@ var maternal = [
     /*54*/{name: 'こう鈴', marriedTo: 57, kids: [58, 59, 60], picture: 'kourei.png', generation: 3, gender: 'f'},
     /*55*/{name: 'よしひこ', marriedTo: 61, kids: [62, 63], picture: 'yoshihiko.png', generation: 3, gender: 'm'},
     /*56*/{name: 'たかよし', marriedTo: 64, kids: [65, 66], picture: 'takayoshi.png', generation: 3, gender: 'm'},
-    /*57*/{name: 'けん太郎', marriedTo: 54, kids: [], picture: 'kentarou.png', generation: 3, gender: 'm'},
-    /*58*/{name: 'こう一郎', marriedTo: -1, kids: [], picture: 'kouichirou.png', generation: 4, gender: 'm'},
-    /*59*/{name: 'しょうた', marriedTo: -1, kids: [], picture: 'shilyouta.png', generation: 4, gender: 'm'},
-    /*60*/{name: 'よう介', marriedTo: -1, kids: [], picture: 'yousuke.png', generation: 4, gender: 'm'},
+    /*57*/{name: '(鈴木)けん太郎', marriedTo: 54, kids: [], picture: 'kentarou.png', generation: 3, gender: 'm'},
+    /*58*/{name: '(鈴木)こう一郎', marriedTo: -1, kids: [], picture: 'kouichirou.png', generation: 4, gender: 'm'},
+    /*59*/{name: '(鈴木)しょうた', marriedTo: -1, kids: [], picture: 'shilyouta.png', generation: 4, gender: 'm'},
+    /*60*/{name: '(鈴木)よう介', marriedTo: -1, kids: [], picture: 'yousuke.png', generation: 4, gender: 'm'},
 
     /*61*/{name: 'なおみ', marriedTo: 55, kids: [], picture: 'naomi (yoshi).png', generation: 3, gender: 'f'},
     /*62*/{name: '---', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'i'},
@@ -130,7 +143,7 @@ var maternal = [
 ];
 
 var paternal = [
-    /*0*/{name: 'Michael Cape', marriedTo: 1, kids: [2, 3, 4], dob: 'April 9, 1969', marriageDate: 'December 28, xxxx', marriagePlace: '8118 Ingleside Way, Sacramento, CA', generation: 3, gender: 'm', birthplace: 'San Francisco, US', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['He went to Bible college in the Phillipines, where he met my mother.', 'He was the youngest of 4, so he was subject to constant bullying. He therefore developed tactics to fight back.', 'He met my mom when the church sent him to pick up a new member that would be joining them, and that happened to be my mom.'], memories: ['My dad introduced me to running, and we ran and trained for the Great Aloha Run when I was only 7 years old.']}, 
+    /*0*/{name: 'Michael Cape', marriedTo: 1, kids: [2, 3, 4], dob: 'April 9, 1969', marriageDate: 'December 28, xxxx', marriagePlace: '8118 Ingleside Way, Sacramento, CA', generation: 3, gender: 'm', birthplace: 'San Francisco, US', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['He went to Bible college in the Phillipines, where he met my mother.', 'He was the youngest of 4, so he was subject to constant bullying. He therefore developed tactics to fight back.', 'He met my mom when the church sent him to pick up a new member that would be joining them, and that happened to be my mom.'], memories: ['My dad introduced me to running, and we ran and trained for the Great Aloha Run when I was only 7 years old.'], picture: ''}, 
 
     /*1*/{name: '(廖) Miki Kiyokawa', marriedTo: 0, kids: [2, 3, 4], dob: 'December 1, 1970', marriageDate: 'December 28, 1996', marriagePlace: '8118 Ingleside Way, Sacramento, CA', generation: 3, gender: 'f', birthplace: 'Hiroshima, Japan', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['She only went to Japanese School til 4th grade and could speak Japanese fluently now. She also started to learn English in 4th grade and could speak it naturally, despite it being her second language.', 'She was an only child.', 'She went to medical school in the Philippines, where she met my dad.', 'She told me that following graduation of medical school, she and my dad didn\'t know where to go. She then saw a vision of Hawaii in her dream, so she decided to move there.'], memories: ['I remember, if I completed a certain Kumon math worksheet in a certain time limit, she would give me a fruit snack, which motivated me.'], picture: 'mom.png'},
 
@@ -140,7 +153,7 @@ var paternal = [
 
     /*4*/{name: '(廖) Matthew Cape', marriedTo: -1, kids: [], dob: 'July 26, 2009', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 4, gender: 'm', exists: 'Living',birthplace: 'Honolulu, HI', livesIn: 'Honolulu, HI', facts: ['He loves surfing.'], memories: ['He was holding a waterproof glowing watch when he was born.'], picture: 'matthew.png'},
 
-    /*5*/{name: 'Nester', marriedTo: -1, kids: [], picture: '', generation: 2, gender: 'm'},
+    /*5*/{name: 'Nester Cape', marriedTo: -1, kids: [], picture: '', generation: 2, gender: 'm'},
 
     /*6*/{name: 'Angelina Abalos', marriedTo: -1, kids: [], dob: 'March 9, 1939', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 2, gender: 'f', kidsOf: [9, 10], exists: 'Deceased - from leukemia in 2014', birthPlace: 'Dyong Calisao, Pangasinan', livesIn: 'Sacramento, CA', facts: ['Met Pio @San Francisco, California, at grandma’s cousin’s restaurant ', '1982 moved to Sacramento – cheaper houses compared to San Francisco.'], memories: ['In celebration of my 8th birthday in California, she invited all my relatives over to her house and bought a 50-pound pig as a main. I also remember her pronouncing “waffle” as “wapple” and it got me so mad and I foolishly tried to correct her.'], picture: ''}, 
 
@@ -152,7 +165,7 @@ var paternal = [
 
     /*10*/{name: 'Nina Ferrer', marriedTo: 9, kids: [], dob: 'unknown', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 1, gender: 'f', exists: 'Deceased before I was born', birthplace: 'Dyong Calisao Pangasinan , Philippines', livesIn: 'N/A', facts: ['Auntie Nina, the sister that persuaded my dad be named “Michael” is named after him.', 'Owned a lot of land – helped take care of my dad before and after school by feeding him and taking him on walks. '], memories: [], picture: ''}, 
 
-    /*11*/{name: 'Edith', marriedTo: 13, kids: [14, 15], picture: '', generation: 2, gender: 'f'},
+    /*11*/{name: 'Edith Cape', marriedTo: 13, kids: [14, 15], picture: '', generation: 2, gender: 'f'},
 
     /*12*/{name: 'Pio Cape', marriedTo: 6, kids: [22, 23, 24, 0], dob: 'November 19, 1928', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 2, gender: 'm', exists: 'Living', birthplace: 'Canilog Ilo Ilo, Philippines', livesIn: 'Sacramento, CA', facts: ['He never finished high school, due to war.', 'He was in army, fought in the Korean war. He joined the army to become a citizen. He moved to California as part of the army requirement. He also said that he came to Hawaii for a short while, but due to the lack of employment opportunities, he left.', 'He learned how to play chess and gamble during his nights out at sea. A trip between Philippines, where he was building things, and California, would take up to 2 weeks. To handle the immense boredom, his sailors taught him how to play chess. After a few days, no one wanted to play him anymore because he was too strong.', 'During the Korean War, he was part of frontline. Fortunately, he was driving a tank as a radio operator, so he was sort of safe. He talked about how he witnessed his friends die.', 'He is also a self-taught fisherman, by observing people. His largest fish caught was 50 pounds. His catches often went to the family restaurant.'], memories: ['He recently came over to spend the new year with us. We played chess a lot and I actually beat him several times! I remember the first time I tried to play him I got rekt. By using some strategies, I was able to attack him. We also (fake) gambled a lot, using thin disks as money. It was a great experience.'], picture: ''}, 
 
@@ -180,53 +193,53 @@ var paternal = [
 
     /*24*/{name: 'Markie Cape', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'm'},
 
-    /*25*/{name: 'Ernesto the 1st', marriedTo: -1, kids: [], picture: '', generation: 2, gender: 'm'},
+    /*25*/{name: 'Ernesto the 1st Abalos', marriedTo: -1, kids: [], picture: '', generation: 2, gender: 'm'},
 
-    /*26*/{name: 'Ernesto the 2nd', marriedTo: 31, kids: [32, 33, 34], picture: '', generation: 2, gender: 'm'},
+    /*26*/{name: 'Ernesto the 2nd Abalos', marriedTo: 31, kids: [32, 33, 34], picture: '', generation: 2, gender: 'm'},
 
-    /*27*/{name: 'Manny', marriedTo: 35, kids: [36, 37], picture: '', generation: 2, gender: 'm'},
+    /*27*/{name: 'Manny Abalos', marriedTo: 35, kids: [36, 37], picture: '', generation: 2, gender: 'm'},
 
-    /*28*/{name: 'Mike', marriedTo: 45, kids: [46, 47, 48], picture: '', generation: 2, gender: 'm'},
+    /*28*/{name: 'Mike Abalos', marriedTo: 45, kids: [46, 47, 48], picture: '', generation: 2, gender: 'm'},
 
-    /*29*/{name: 'Ellen', marriedTo: 53, kids: [54, 55, 56], picture: '', generation: 2, gender: 'f'},
+    /*29*/{name: 'Ellen Abalos', marriedTo: 53, kids: [54, 55, 56], picture: '', generation: 2, gender: 'f'},
 
-    /*30*/{name: 'Ellis', marriedTo: 57, kids: [60, 59, 58], picture: '', generation: 2, gender: 'f'},
+    /*30*/{name: 'Ellis Abalos', marriedTo: 57, kids: [60, 59, 58], picture: '', generation: 2, gender: 'f'},
 
     /*31*/{name: 'Florie', marriedTo: -1, kids: [], picture: '', generation: 2, gender: 'f'},
 
-    /*32*/{name: 'Harley', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'm'},
+    /*32*/{name: 'Harley Abalos', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'm'},
 
-    /*33*/{name: 'Rios', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'm'},
+    /*33*/{name: 'Rios Abalos', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'm'},
 
-    /*34*/{name: 'Venus', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'f'},
+    /*34*/{name: 'Venus Abalos', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'f'},
 
     /*35*/{name: 'Eva', marriedTo: 27, kids: [], picture: '', generation: 2, gender: 'f'},
 
-    /*36*/{name: 'Euclid', marriedTo: 38, kids: [39, 40], picture: '', generation: 3, gender: 'm'},
+    /*36*/{name: 'Euclid Abalos', marriedTo: 38, kids: [39, 40], picture: '', generation: 3, gender: 'm'},
 
-    /*37*/{name: 'Septer', marriedTo: 41, kids: [42, 43, 44], picture: '', generation: 3, gender: 'm'},
+    /*37*/{name: 'Septer Abalos', marriedTo: 41, kids: [42, 43, 44], picture: '', generation: 3, gender: 'm'},
 
     /*38*/{name: 'Debra', marriedTo: 36, kids: [], picture: '', generation: 3, gender: 'f'},
 
-    /*39*/{name: 'Alexis', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'f'},
+    /*39*/{name: 'Alexis Abalos', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'f'},
 
-    /*40*/{name: 'Aiden', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'm'},
+    /*40*/{name: 'Aiden Abalos', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'm'},
 
     /*41*/{name: 'Jasmine', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'f'},
 
-    /*42*/{name: 'Dimone', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'm'},
+    /*42*/{name: 'Dimone Abalos', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'm'},
 
-    /*43*/{name: 'Josela', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'f'},
+    /*43*/{name: 'Josela Abalos', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'f'},
 
-    /*44*/{name: 'Josarah', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'f'},
+    /*44*/{name: 'Josarah Abalos', marriedTo: -1, kids: [], picture: '', generation: 4, gender: 'f'},
 
     /*45*/{name: 'Marilyn', marriedTo: -1, kids: [], picture: '', generation: 2, gender: 'f'},
 
-    /*46*/{name: 'Adela', marriedTo: 49, kids: [50], picture: '', generation: 3, gender: 'f'},
+    /*46*/{name: 'Adela Abalos', marriedTo: 49, kids: [50], picture: '', generation: 3, gender: 'f'},
 
-    /*47*/{name: 'Angela', marriedTo: 51, kids: [52], picture: '', generation: 3, gender: 'f'},
+    /*47*/{name: 'Angela Abalos', marriedTo: 51, kids: [52], picture: '', generation: 3, gender: 'f'},
 
-    /*48*/{name: 'America', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'f'},
+    /*48*/{name: 'America Abalos', marriedTo: -1, kids: [], picture: '', generation: 3, gender: 'f'},
 
     /*49*/{name: '---', marriedTo: 46, kids: [50], picture: '', generation: 3, gender: 'm'},
 
@@ -278,7 +291,7 @@ var listOfXPositions = [[], [], [], []];
 var generationCounter = [0, 0, 0, 0];
 
 var generationHeight = 24;
-var distBetweenPartners = 15;
+var distBetweenPartners = document.getElementsByClassName('range1')[0].value;
 var boxSize = 10;
 var forkX = [];
 var forkLocations = [];
@@ -392,11 +405,8 @@ function repeatPathFind(l, a, ignoreforks){//l is an int, referring to a locatio
         }else{
             //create second member (married to initial member)
             createMember(a, a[l].marriedTo, listOfXPositions[a[l].generation-1][generationCounter[a[l].generation-1]-1]+parseInt(boxSize)+parseInt(distBetweenPartners*apartPerGenerationPartners[a[l].generation-1]), startingPosY*(generationHeight/24));
-
         }
 
-
-       
         console.log('current list of X positions is ' + listOfXPositions);
 
         //create bar between
@@ -443,9 +453,7 @@ function repeatPathFind(l, a, ignoreforks){//l is an int, referring to a locatio
                         console.log('now reverse pathfinding');
                     }
                 }
-                
             }
-            
         }else{
             //end
             return 0;
@@ -459,25 +467,24 @@ if(mode == 'm'){
     init(paternal, 150, 3);
 }
 
-
-
 function createMember(side, location, posX, posY){ // location is also an int!
     var holder = document.createElement('div');
     holder.className = 'preview';
     holder.innerHTML = side[location].name;
     if(side[location].gender == 'f'){
-        holder.style.backgroundColor = '#ffa3eb';
+        holder.style.backgroundColor = female;
         //holder.style.border = '2px solid #ff00c8';
     }else if (side[location].gender == 'm'){
-        holder.style.backgroundColor = '#9fd1fc'
+        holder.style.backgroundColor = male;
         //holder.style.border = '#1994ff'
     }else{
-        holder.style.backgroundColor = 'black';
+        holder.style.backgroundColor = unidentified;
     }
 
     if (side[location].name == '---'){
-        holder.style.backgroundColor = 'black';
+        holder.style.backgroundColor = unidentified;
     }
+    holder.style.color = textColor;
     document.getElementById('tree').appendChild(holder);
     holder.style.top = posY + '%';
     holder.style.left = posX + '%';
@@ -485,6 +492,9 @@ function createMember(side, location, posX, posY){ // location is also an int!
     text.innerHTML = location.name;
     text.className = 'namePreview';
     document.getElementsByClassName('preview')[document.getElementsByClassName('preview').length-1].appendChild(text);*/
+    if(side[location].hasOwnProperty('dob')){
+        holder.addEventListener('click', showMoreInfo);
+    }
     holder.addEventListener('mousemove', showInfo);
     holder.addEventListener('mouseout', hideInfo);
     holder.style.brightness = '90%';
@@ -495,10 +505,10 @@ function showInfo(){
     if(event.clientY + 50 > 750){
         document.getElementById('informationDiv').style.top = '750px';
     }else{
-        document.getElementById('informationDiv').style.top = event.clientY + 50 + 'px';
+        document.getElementById('informationDiv').style.top = event.clientY + 40 + 'px';
     }
     
-    document.getElementById('informationDiv').style.left = event.clientX + window.pageXOffset + 30 + 'px';
+    document.getElementById('informationDiv').style.left = event.clientX + window.pageXOffset + 15 + 'px';
     document.getElementById('informationDiv').style.display = 'block';
   
     this.style.brightness = '100%';
@@ -523,32 +533,175 @@ function showInfo(){
     }
     
     if(mode == 'm'){
-        document.getElementById('floatingImage').setAttribute('src', maternal[locationOfName].picture)
+        if(maternal[locationOfName].picture == ''){
+            document.getElementById('warningText').style.display = 'block';
+            document.getElementById('warningText').innerHTML = '⚠️ No picture available for ' + this.innerHTML;
+            document.getElementById('informationDiv').style.width = '14%';
+            document.getElementById('informationDiv').style.border = '2px solid red';
+            document.getElementById('floatingImage').style.display = 'none';
+            if(maternal[locationOfName].hasOwnProperty('dob')){
+                document.getElementById('readMore').style.display = 'block';
+                document.getElementById('informationDiv').style.border = '2px solid green';
+            }else{
+                document.getElementById('readMore').style.display = 'none';
+                document.getElementById('informationDiv').style.border = '2px solid red';
+            }
+        }else{
+            document.getElementById('warningText').style.display = 'none';
+            document.getElementById('informationDiv').style.width = '5%';
+            document.getElementById('floatingImage').style.display = 'block';
+            document.getElementById('informationDiv').style.border = '2px solid black';
+            document.getElementById('floatingImage').setAttribute('src', maternal[locationOfName].picture)
+            if(maternal[locationOfName].hasOwnProperty('dob')){
+                document.getElementById('informationDiv').style.width = '5%';
+                document.getElementById('readMore').style.display = 'block';
+                document.getElementById('informationDiv').style.border = '2px solid green';
+            }else{
+                document.getElementById('readMore').style.display = 'none';
+                document.getElementById('informationDiv').style.border = '2px solid black';
+            }
+        }
     }else{
-        document.getElementById('floatingImage').setAttribute('src', paternal[locationOfName].picture)
+        if(paternal[locationOfName].picture == ''){
+            document.getElementById('warningText').style.display = 'block';
+            document.getElementById('warningText').innerHTML = '⚠️ No picture available for ' + this.innerHTML;
+            document.getElementById('informationDiv').style.width = '14%';
+            document.getElementById('informationDiv').style.border = '2px solid red';
+            document.getElementById('floatingImage').style.display = 'none';
+            if(paternal[locationOfName].hasOwnProperty('dob')){
+                document.getElementById('readMore').style.display = 'block';
+                document.getElementById('informationDiv').style.border = '2px solid green';
+            }else{
+                document.getElementById('readMore').style.display = 'none';
+                document.getElementById('informationDiv').style.border = '2px solid red';
+            }
+        }else{
+            document.getElementById('warningText').style.display = 'none';
+            document.getElementById('informationDiv').style.width = '5%';
+            document.getElementById('floatingImage').style.display = 'block';
+            document.getElementById('informationDiv').style.border = '2px solid black';
+            document.getElementById('floatingImage').setAttribute('src', paternal[locationOfName].picture)
+            if(paternal[locationOfName].hasOwnProperty('dob')){
+                document.getElementById('readMore').style.display = 'block';
+                document.getElementById('informationDiv').style.border = '2px solid green';
+            }else{
+                document.getElementById('readMore').style.display = 'none';
+                document.getElementById('informationDiv').style.border = '2px solid red';
+            }
+        }
     }
-    /*document.getElementsByClassName('keyInformation')[0].innerHTML = '<b>> Birthplace: </b>' + maternal[locationOfName].birthplace;
-    document.getElementsByClassName('keyInformation')[1].innerHTML = '<b>> Birthdate: </b>' + maternal[locationOfName].dob;
-    document.getElementsByClassName('keyInformation')[2].innerHTML = '<b>> Status: </b>' + maternal[locationOfName].exists;
-    if(maternal[locationOfName].exists != 'Living'){
-        document.getElementsByClassName('keyInformation')[2].style.color = 'red';
-    }else{
-        document.getElementsByClassName('keyInformation')[2].style.color = 'lightgreen';
-    }
-    document.getElementsByClassName('keyInformation')[3].innerHTML = '<b>> Currently resides in: </b>' + maternal[locationOfName].livesIn;
-    for (var i = 0; i < maternal[locationOfName].facts.length; i++){
-        var facts = document.createElement('p');
-        facts.className = 'facts';
-        facts.innerHTML = '- ' + maternal[locationOfName].facts[i];
-        document.getElementsByClassName('keyInformation')[4].appendChild(facts);
-    }
+}
 
-    for (var i = 0; i < maternal[locationOfName].memories.length; i++){
-        var m = document.createElement('p');
-        m.className = 'facts';
-        m.innerHTML = '- ' + maternal[locationOfName].memories[i];
-        document.getElementsByClassName('keyInformation')[5].appendChild(m);
-    }*/
+function showMoreInfo(){
+    document.getElementById('tree').style.opacity = '0.25';
+   
+    var locationOfName;
+    //remove all instances of stats
+    const allFacts = document.querySelectorAll('.facts');
+
+    //position the window
+    document.getElementById('moreInformationDiv').style.left = parseInt(window.pageXOffset) + (window.innerWidth*0.25) + "px";
+    allFacts.forEach(box => {
+    box.remove();
+    });
+
+    if(mode == 'm'){
+        for (var i = 0; i < maternal.length; i++){
+            if(maternal[i].name == this.innerHTML){
+                locationOfName = i;
+                break;
+            }
+        }
+        
+        if(maternal[locationOfName].picture != ''){
+            document.getElementById('profilepic').setAttribute('src', maternal[locationOfName].picture);
+        }else{
+            document.getElementById('profilepic').setAttribute('src', 'https://images.nightcafe.studio//assets/profile.png?tr=w-1600,c-at_max');
+        }
+        
+        document.getElementById('moreInformationDiv').style.display = 'block';
+        if(maternal[locationOfName].gender == 'm'){
+            document.getElementById('moreInformationDiv').style.border = '3px solid ' + male;
+            document.getElementById('topHeader').style.backgroundColor = male;
+        }else{
+            document.getElementById('moreInformationDiv').style.border = '3px solid ' + female;
+            document.getElementById('topHeader').style.backgroundColor = female;
+        }
+        document.getElementById('topHeader').style.color = textColor;
+        document.getElementsByClassName('keyInformation')[0].innerHTML = '<b>► Birthplace: </b>' + maternal[locationOfName].birthplace;
+        document.getElementsByClassName('keyInformation')[1].innerHTML = '<b>► Birthdate: </b>' + maternal[locationOfName].dob;
+        document.getElementsByClassName('keyInformation')[2].innerHTML = '<b>► Status: </b>' + maternal[locationOfName].exists;
+        document.getElementById('introductory').innerHTML = 'About ' + this.innerHTML;
+        if(maternal[locationOfName].exists != 'Living'){
+            document.getElementsByClassName('keyInformation')[2].style.color = 'red';
+        }else{
+            document.getElementsByClassName('keyInformation')[2].style.color = 'green';
+        }
+        document.getElementsByClassName('keyInformation')[3].innerHTML = '<b>► Currently resides in: </b>' + maternal[locationOfName].livesIn;
+        for (var i = 0; i < maternal[locationOfName].facts.length; i++){
+            var facts = document.createElement('p');
+            facts.className = 'facts';
+            facts.innerHTML = '» ' + maternal[locationOfName].facts[i];
+            document.getElementsByClassName('keyInformation')[4].appendChild(facts);
+        }
+    
+        for (var i = 0; i < maternal[locationOfName].memories.length; i++){
+            var m = document.createElement('p');
+            m.className = 'facts';
+            m.innerHTML = '» ' + maternal[locationOfName].memories[i];
+            document.getElementsByClassName('keyInformation')[5].appendChild(m);
+        }
+
+    }else{
+        for (var i = 0; i < paternal.length; i++){
+            if(paternal[i].name == this.innerHTML){
+                locationOfName = i;
+                break;
+            }
+        }
+
+        if(paternal[locationOfName].picture != ''){
+            document.getElementById('profilepic').setAttribute('src', paternal[locationOfName].picture);
+        }else{
+            document.getElementById('profilepic').setAttribute('src', 'https://images.nightcafe.studio//assets/profile.png?tr=w-1600,c-at_max');
+        }
+
+        document.getElementById('profilepic').setAttribute('src', paternal[locationOfName].picture);
+        document.getElementById('moreInformationDiv').style.display = 'block';
+        if(maternal[locationOfName].gender == 'm'){
+            document.getElementById('moreInformationDiv').style.border = '3px solid ' + male;
+            document.getElementById('topHeader').style.backgroundColor = male;
+        }else{
+            document.getElementById('moreInformationDiv').style.border = '3px solid ' + female;
+            document.getElementById('topHeader').style.backgroundColor = female;
+        }
+        document.getElementById('topHeader').style.color = textColor;
+        document.getElementsByClassName('keyInformation')[0].innerHTML = '<b>► Birthplace: </b>' + paternal[locationOfName].birthplace;
+        document.getElementsByClassName('keyInformation')[1].innerHTML = '<b>► Birthdate: </b>' + paternal[locationOfName].dob;
+        document.getElementsByClassName('keyInformation')[2].innerHTML = '<b>► Status: </b>' + paternal[locationOfName].exists;
+        document.getElementById('introductory').innerHTML = 'About ' + this.innerHTML;
+        if(paternal[locationOfName].exists != 'Living'){
+            document.getElementsByClassName('keyInformation')[2].style.color = 'red';
+        }else{
+            document.getElementsByClassName('keyInformation')[2].style.color = 'green';
+        }
+        document.getElementsByClassName('keyInformation')[3].innerHTML = '<b>► Currently resides in: </b>' + paternal[locationOfName].livesIn;
+        for (var i = 0; i < paternal[locationOfName].facts.length; i++){
+            var facts = document.createElement('p');
+            facts.className = 'facts';
+            facts.innerHTML = '» ' + paternal[locationOfName].facts[i];
+            document.getElementsByClassName('keyInformation')[4].appendChild(facts);
+        }
+    
+        for (var i = 0; i < paternal[locationOfName].memories.length; i++){
+            var m = document.createElement('p');
+            m.className = 'facts';
+            m.innerHTML = '» ' + paternal[locationOfName].memories[i];
+            document.getElementsByClassName('keyInformation')[5].appendChild(m);
+        }
+    }
+    
+   
 }
 
 function hideInfo(){
@@ -568,6 +721,8 @@ function createBar(direction, start, end, locationXorY){
         h.style.top = start + "%";
         h.style.height = ((end - start)/100)*window.innerHeight + 'px';
     }
+    h.style.border = document.getElementsByClassName('range1')[3].value + 'px solid ' + barColor;
+    h.style.backgroundColor = barColor;
     document.getElementById('tree').appendChild(h);
 }
 
@@ -612,7 +767,7 @@ function redraw(){
     
     for (var i = 0; i < document.getElementsByClassName('preview').length; i++){
         document.getElementsByClassName('preview')[i].style.width = boxSize + '%';
-        document.getElementsByClassName('preview')[i].style.fontSize = 85*(boxSize/10) + '%';
+        document.getElementsByClassName('preview')[i].style.fontSize = 105*(boxSize/10) + '%';
     }
 
     for (var i = 0; i < document.getElementsByClassName('line').length; i++){
@@ -661,21 +816,87 @@ function switchMode(){
     if(this.innerHTML == '(Switch to maternal)'){
         mode = 'm';
         this.innerHTML = '(Switch to paternal)';
-        this.style.backgroundColor = '#9fd1fc'
+        this.style.backgroundColor = male;
         document.getElementById('bold').innerHTML = 'Maternal side'
-        document.getElementById('bold').style.color = '#ffa3eb';
+        document.getElementById('bold').style.color = female;
         removeAll();
         init(maternal, 230, 3);
     }else{
         console.log('false');
         mode = 'p';
         this.innerHTML = '(Switch to maternal)';
-        this.style.backgroundColor = '#ffa3eb'
+        this.style.backgroundColor = female;
         document.getElementById('bold').innerHTML = 'Paternal side'
-        document.getElementById('bold').style.color = '#9fd1fc';
+        document.getElementById('bold').style.color = male;
         removeAll();
         init(paternal, 150, 3);
     }
 }
 
 document.getElementById('change').addEventListener('click', switchMode);
+
+//by default
+document.getElementsByClassName('textBox')[0].value = '#ffa3eb';
+document.getElementsByClassName('textBox')[1].value = '#9fd1fc';
+document.getElementsByClassName('textBox')[2].value = 'black';
+document.getElementsByClassName('textBox')[3].value = 'black';
+document.getElementsByClassName('textBox')[4].value = 'black';
+
+function changeFemale(){
+    female = document.getElementsByClassName('textBox')[0].value;
+    removeAll();
+    redraw();
+    if(mode == 'f'){
+        document.getElementById('bold').style.color = female;
+    }else{
+        document.getElementById('change').style.backgroundColor = female;
+    }
+    document.getElementById('emphasisGradient').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
+    document.getElementById('title').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
+}
+
+function changeMale(){
+    male = document.getElementsByClassName('textBox')[1].value;
+    removeAll();
+    redraw();
+    if(mode == 'm'){
+        document.getElementById('bold').style.color = male;
+        
+    }else{
+        document.getElementById('change').style.backgroundColor = male;
+    }
+    document.getElementById('emphasisGradient').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
+    document.getElementById('title').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
+}
+
+function changeUnidentified(){
+    unidentified = document.getElementsByClassName('textBox')[2].value;
+    removeAll();
+    redraw();
+}
+
+function changeBarColor(){
+    barColor = document.getElementsByClassName('textBox')[3].value;
+    removeAll();
+    redraw();
+}
+
+function changeTextColor(){
+    textColor = document.getElementsByClassName('textBox')[4].value;
+    document.getElementById('change').style.color = textColor;
+    removeAll();
+    redraw();
+}
+
+document.getElementsByClassName('inputTextSubmit')[0].addEventListener('click', changeFemale);
+document.getElementsByClassName('inputTextSubmit')[1].addEventListener('click', changeMale);
+document.getElementsByClassName('inputTextSubmit')[2].addEventListener('click', changeUnidentified);
+document.getElementsByClassName('inputTextSubmit')[3].addEventListener('click', changeBarColor);
+document.getElementsByClassName('inputTextSubmit')[4].addEventListener('click', changeTextColor);
+
+function hideExtraInfo(){
+    document.getElementById('moreInformationDiv').style.display = 'none';
+    document.getElementById('tree').style.opacity = '1';
+}
+
+document.getElementById('exit').addEventListener('click', hideExtraInfo);
