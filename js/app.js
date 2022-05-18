@@ -22,7 +22,7 @@ var maternal = [
 
     /*1*/{name: 'Michael Cape', marriedTo: 0, kids: [2, 3, 4], dob: 'April 9, 1969', marriageDate: 'December 28, xxxx', marriagePlace: '8118 Ingleside Way, Sacramento, CA', generation: 3, gender: 'm', /*kidsOf: [11, 12],*/ birthplace: 'San Francisco, US', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['He went to Bible college in the Phillipines, where he met my mother.', 'He was the youngest of 4, so he was subject to constant bullying. He therefore developed tactics to fight back.', 'He met my mom when the church sent him to pick up a new member that would be joining them, and that happened to be my mom.'], memories: ['My dad introduced me to running, and we ran and trained for the Great Aloha Run when I was only 7 years old.'], picture: ''}, 
 
-    /*2*/{name: '(廖) Micaiah Cape', marriedTo: -1, kids: [], dob: 'February 15, 2005', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 4, gender: 'm', birthplace: 'Honolulu, HI', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['I have perfect pitch, and I love flexing this on anyone I could!', 'I have a crush on (encrypted).', 'My longest (non-race) run ever is 11.17 miles, in 1 hour 20 minutes and 57 seconds.', 'I was the junior homecoming prince and the senior prom prince.', 'I have two published articles in scientific peer-reviewed medical journals.', 'I coded this family tree myself.', 'My cumulative GPA is coincidentally around 4.20', 'I ended up crying at the end of track season.', 'Michael was my Spartan Buddy when I came into Maryknoll sophomore year and we\'ve been friends ever since.', 'I could run 2 sub-6 minute miles, back to back.'], memories: ['I used to be scared of flashing lights.'], picture: 'micaiah.png'},
+    /*2*/{name: '(廖) Micaiah Cape', marriedTo: -1, kids: [], dob: 'February 15, 2005', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 4, gender: 'm', birthplace: 'Honolulu, HI', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['I have perfect pitch, and I love flexing this on anyone I could!', 'I have a crush on (encrypted).', 'My longest (non-race) run ever is 11.17 miles, in 1 hour 20 minutes and 57 seconds.', 'I was the junior homecoming prince and the senior prom prince.', 'I have two published articles in scientific peer-reviewed medical journals.', 'I coded this family tree myself.', 'I ended up crying at the end of track season.', 'Michael was my Spartan Buddy when I came into Maryknoll sophomore year and we\'ve been friends ever since.'], memories: ['I used to be scared of flashing lights.'], picture: 'micaiah.png'},
 
     /*3*/{name: '(廖) Malachi Cape', marriedTo: -1, kids: [], dob: 'November 18, 2007', marriageDate: 'TBA', marriagePlace: 'TBA', generation: 4, gender: 'm', birthplace: 'Honolulu, HI', exists: 'Living', livesIn: 'Honolulu, HI', facts: ['He is allergic to gluten', 'He also enjoys cross country and track.', 'He likes to drive me crazy by saying cringy things.'], memories: ['He was holding a yellow toy bulldozer in his hands when he was born.'], picture: 'malachi.png'},
 
@@ -462,7 +462,7 @@ function repeatPathFind(l, a, ignoreforks){//l is an int, referring to a locatio
 }
 
 if(mode == 'm'){
-    init(maternal, 230, 3);
+    init(maternal, 240, 3);
 }else{
     init(paternal, 150, 3);
 }
@@ -760,7 +760,7 @@ document.getElementsByClassName('range1')[3].oninput = function(){
 function redraw(){
     removeAll();
     if(mode == 'm'){
-        init(maternal, 230, 3);
+        init(maternal, 240, 3);
     }else{
         init(paternal, 150, 3);
     }
@@ -768,7 +768,15 @@ function redraw(){
     for (var i = 0; i < document.getElementsByClassName('preview').length; i++){
         document.getElementsByClassName('preview')[i].style.width = boxSize + '%';
         document.getElementsByClassName('preview')[i].style.fontSize = 105*(boxSize/10) + '%';
+        
     }
+    document.getElementById('title').style.fontSize = 500*(boxSize/10) + '%';
+    if(mode == 'm'){
+        document.getElementById('title').style.left = parseInt(Math.min(...listOfXPositions[2])) + "%";
+    }else{
+        document.getElementById('title').style.left = parseInt(Math.min(...listOfXPositions[1])) + "%";
+    }
+    
 
     for (var i = 0; i < document.getElementsByClassName('line').length; i++){
         document.getElementsByClassName('line')[i].style.border = document.getElementsByClassName('range1')[3].value + 'px solid black';
@@ -819,8 +827,9 @@ function switchMode(){
         this.style.backgroundColor = male;
         document.getElementById('bold').innerHTML = 'Maternal side'
         document.getElementById('bold').style.color = female;
+        document.getElementById('title').innerHTML = 'Micaiah\'s maternal family tree ^'
         removeAll();
-        init(maternal, 230, 3);
+        init(maternal, 240, 3);
     }else{
         console.log('false');
         mode = 'p';
@@ -828,6 +837,7 @@ function switchMode(){
         this.style.backgroundColor = female;
         document.getElementById('bold').innerHTML = 'Paternal side'
         document.getElementById('bold').style.color = male;
+        document.getElementById('title').innerHTML = 'Micaiah\'s paternal family tree ^'
         removeAll();
         init(paternal, 150, 3);
     }
@@ -900,3 +910,8 @@ function hideExtraInfo(){
 }
 
 document.getElementById('exit').addEventListener('click', hideExtraInfo);
+if(mode == 'm'){
+    document.getElementById('title').style.left = parseInt(Math.min(...listOfXPositions[2])) + "%";
+}else{
+    document.getElementById('title').style.left = parseInt(Math.min(...listOfXPositions[1])) + "%";
+}
