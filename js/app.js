@@ -700,8 +700,6 @@ function showMoreInfo(){
             document.getElementsByClassName('keyInformation')[5].appendChild(m);
         }
     }
-    
-   
 }
 
 function hideInfo(){
@@ -863,6 +861,7 @@ function changeFemale(){
     }
     document.getElementById('emphasisGradient').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
     document.getElementById('title').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
+    document.getElementById('rainbowGradient').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
 }
 
 function changeMale(){
@@ -877,6 +876,7 @@ function changeMale(){
     }
     document.getElementById('emphasisGradient').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
     document.getElementById('title').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
+    document.getElementById('rainbowGradient').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
 }
 
 function changeUnidentified(){
@@ -915,3 +915,5 @@ if(mode == 'm'){
 }else{
     document.getElementById('title').style.left = parseInt(Math.min(...listOfXPositions[1])) + "%";
 }
+
+document.getElementById('rainbowGradient').style.backgroundImage = 'linear-gradient(90deg, ' + female + ', ' + male + ')'
